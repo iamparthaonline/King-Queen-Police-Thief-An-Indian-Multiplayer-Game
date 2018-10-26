@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description" content="Css precedence - PR">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JS Bin</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Crete+Round:400,400i|Righteous');
+
+        body {
+
+            font-family: 'Righteous', cursive;
+
+        }
+
+        .container {
+            margin: auto;
+        }
+
+        @media (min-width:480px) {
+            body {
+                background: #03A9F4;
+            }
+            .container {
+                max-width: 350px;
+                border-radius: 10px;
+                box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+                border: 1px solid #ccc;
+                background: #fff;
+            }
+        }
+
+        .header {
+            text-align: center;
+            color: #90CAF9;
+            margin-top: 10px;
+        }
+
+        .header .total {
+            margin-top: 5px;
+            color: #42A5F5;
+            line-height: 10px;
+            font-size: 24px;
+            display: block;
+        }
+
+        .option-list {
+            padding: 25px;
+
+        }
+
+        .option-container {
+            text-align: center;
+            display: inline-block;
+            margin-bottom: 25px;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .option-container:nth-child(2n+1) {
+            float: left;
+            clear: both;
+            margin-right: 50px;
+        }
+        .option-container:nth-child(2n) {
+            margin-left: 50px;
+        }
+
+        .avatar {
+            height: 100px;
+            font-family: 'Amatic SC', cursive;
+            line-height: 100px;
+            font-size: 24px;
+            color: #FF5722;
+            background: #ffffff;
+            width: 100px;
+            border-radius: 50%;
+            display: inline-block;
+            font-weight: 700;
+            margin-bottom: 10px;
+            cursor: pointer;
+            box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+        }
+
+        .name::before {
+            content: '⚫';
+            margin-right: 2px;
+        }
+
+        .name.online::before {
+            color: #00C853;
+        }
+
+        .name.busy::before {
+            color: #FF9800;
+        }
+
+        .name.offline::before {
+            color: #d50000;
+        }
+
+        .avatar .name.correct::after {
+            content: '✓';
+            display: inline-block;
+        }
+
+        .option-container .player-score-container {
+            background: #fff;
+            display: inline-block;
+            padding: 3px;
+            border-radius: 3px;
+            font-size: 10px;
+        }
+
+        .option-container .player-score-container.positive .player-score::after {
+            content: "▲";
+            color: #4CAF50;
+        }
+
+        .option-container .player-score-container.negative .player-score::after {
+            content: "▼";
+            color: #f44336;
+        }
+
+        .status-message {
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid #212121;
+            padding: 10px;
+            text-align: center;
+            letter-spacing: 2px;
+            line-height: 50px;
+            font-size: 12px;
+            margin: 0 20px 20px;
+        }
+        .copyright {
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            display: block;
+            width: 100%;
+            padding-bottom: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="score">
+                <span class="text">Score</span>
+                <span class="total">4200</span>
+            </div>
+        </div>
+        <div class="option-list">
+            <div class="option-container">
+                <div class="avatar">King</div>
+                <div class="name busy">Player 1</div>
+                <div class="player-score-container negative">
+                    <span class="player-score">+200</span>
+                </div>
+            </div>
+            <div class="option-container">
+                <div class="avatar">Thief</div>
+                <div class="name online">Player 2</div>
+                <div class="player-score-container positive">
+                    <span class="player-score">+200</span>
+                </div>
+            </div>
+            <div class="option-container">
+                <div class="avatar">X</div>
+                <div class="name">You</div>
+                <div class="player-score-container negative">
+                    <span class="player-score">+200</span>
+                </div>
+            </div>
+            <div class="option-container">
+                <div class="avatar">?</div>
+                <div class="name offline">Player 4</div>
+                <div class="player-score-container negative">
+                    <span class="player-score">+200</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="status-message">
+            Player 1 is deciding his play hello hi.
+        </div>
+
+        <div class="copyright"> Created by @partha</div>
+</body>
+
+</html>
