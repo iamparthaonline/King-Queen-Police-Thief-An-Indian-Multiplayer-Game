@@ -24,6 +24,7 @@
             body {
                 background: #03A9F4;
             }
+
             .container {
                 max-width: 350px;
                 border-radius: 10px;
@@ -38,6 +39,9 @@
             color: #90CAF9;
             margin-top: 10px;
         }
+        .header .score {
+            text-align: right;
+        }
 
         .header .total {
             margin-top: 5px;
@@ -48,45 +52,43 @@
         }
 
         .option-list {
-            padding: 25px;
+            padding: 25px 0;
 
         }
 
         .option-container {
             text-align: center;
             display: inline-block;
+            width: 49%;
             margin-bottom: 25px;
             -webkit-tap-highlight-color: transparent;
-        }
-
-        .option-container:nth-child(2n+1) {
-            float: left;
-            clear: both;
-            margin-right: 50px;
-        }
-        .option-container:nth-child(2n) {
-            margin-left: 50px;
         }
 
         .avatar {
             height: 100px;
             font-family: 'Amatic SC', cursive;
             line-height: 100px;
-            font-size: 24px;
-            color: #FF5722;
+            font-size: 50px;
             background: #ffffff;
             width: 100px;
             border-radius: 50%;
             display: inline-block;
             font-weight: 700;
             margin-bottom: 10px;
+            border: 1px solid #d8cfcf;
             cursor: pointer;
             box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
         }
 
+        .name {
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
         .name::before {
-            content: '⚫';
+            content: '*';
             margin-right: 2px;
+            vertical-align: middle;
         }
 
         .name.online::before {
@@ -101,9 +103,13 @@
             color: #d50000;
         }
 
-        .avatar .name.correct::after {
+        .name.correct::after {
             content: '✓';
-            display: inline-block;
+            margin-left: 3px;
+            vertical-align: middle;
+            color: #00C853;
+            font-size: 12px;
+            font-weight: bold;
         }
 
         .option-container .player-score-container {
@@ -127,7 +133,7 @@
         .status-message {
             height: 50px;
             border-radius: 10px;
-            border: 2px solid #212121;
+            border: 2px dashed #212121;
             padding: 10px;
             text-align: center;
             letter-spacing: 2px;
@@ -135,6 +141,7 @@
             font-size: 12px;
             margin: 0 20px 20px;
         }
+
         .copyright {
             position: fixed;
             bottom: 0;
@@ -157,28 +164,28 @@
         </div>
         <div class="option-list">
             <div class="option-container">
-                <div class="avatar">King</div>
+                <div class="avatar">🤴</div>
                 <div class="name busy">Player 1</div>
                 <div class="player-score-container negative">
                     <span class="player-score">+200</span>
                 </div>
             </div>
             <div class="option-container">
-                <div class="avatar">Thief</div>
-                <div class="name online">Player 2</div>
+                <div class="avatar">🤔</div>
+                <div class="name online correct">Player 2</div>
                 <div class="player-score-container positive">
                     <span class="player-score">+200</span>
                 </div>
             </div>
             <div class="option-container">
-                <div class="avatar">X</div>
-                <div class="name">You</div>
+                <div class="avatar">👮</div>
+                <div class="name busy">You</div>
                 <div class="player-score-container negative">
                     <span class="player-score">+200</span>
                 </div>
             </div>
             <div class="option-container">
-                <div class="avatar">?</div>
+                <div class="avatar">🤡</div>
                 <div class="name offline">Player 4</div>
                 <div class="player-score-container negative">
                     <span class="player-score">+200</span>
