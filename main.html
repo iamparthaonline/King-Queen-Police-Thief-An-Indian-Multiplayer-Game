@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>King Queen Police thief</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header create-game">
+            <h2> Enter your name and room Id </h2>
+            <span>( if no room is there then a new one will be created )</span>
+        </div>
+        <div class="create-game-container">
+            <form name="create-game-form">
+                <p>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="name" placeholder="username" maxlength="10">
+                </p>
+                <p>
+                    <label for="roomId">Room Id</label>
+                    <input type="text" id="roomId" name="name" placeholder="room id" maxlength="5">
+                </p>
+                <p>
+                    <label for="pin">Room pin (optional)</label>
+                    <input type="number" id="pin" name="password" placeholder="room pin" max="9999">
+                </p>
+            </form>
+        <a class="button primary-button" href="index.html">Start Game</a>
+
+        </div>
+    </div>
+</body>
+
+</html>
