@@ -65,7 +65,7 @@ body {
     display: inline-block;
     font-weight: 700;
     margin-bottom: 10px;
-    border: 1px solid #d8cfcf;
+    border: 10px solid #EEEEEE;
     cursor: pointer;
     box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
 }
@@ -202,4 +202,16 @@ body {
     letter-spacing: .5px;
     text-align: center;
     margin: 20px;
+}
+
+.avatar.move{
+    animation: move 1s infinite;
+}
+
+@keyframes move {
+    0%   {border: 10px dashed #78909C}
+    25%  {border: 10px dashed #90A4AE}
+    50%  {border: 10px dotted #ccc}
+    75%  {border: 10px dashed #263238}
+    100% {border: 10px dashed #212121}
 }
