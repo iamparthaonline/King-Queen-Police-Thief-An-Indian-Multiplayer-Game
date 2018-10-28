@@ -27,7 +27,7 @@ body {
 .header {
     text-align: center;
     color: #90CAF9;
-    margin-top: 10px;
+    margin: 10px;
 }
 .header .score {
     text-align: right;
@@ -187,7 +187,8 @@ body {
     text-align: center;
 }
 .create-game-container label {
-    display: block;
+    display: inline-block;
+    width: 72px;
 }
 
 .create-game-container input {
@@ -203,6 +204,7 @@ body {
     text-align: center;
     margin: 20px;
 }
+
 
 .avatar.move{
     animation: move 1s infinite;
