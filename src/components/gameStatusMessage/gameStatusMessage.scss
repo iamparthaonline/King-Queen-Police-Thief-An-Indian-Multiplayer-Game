@@ -1,0 +1,14 @@
+
+.status-message {
+    border-radius: 10px;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin: 0;
+    color: #212121;
+    margin-bottom: 20px;
+    &.game {
+        font-size: 16px;
+    }
+}

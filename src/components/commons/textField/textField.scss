@@ -1,0 +1,22 @@
+.input-container {
+    text-align: center;
+}
+
+.input-container label {
+    display: inline-block;
+    width: 72px;
+}
+
+.input-container input {
+    border: 2px dotted #212121;
+    padding: 15px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #42A5F5;
+    outline: none;
+    font-family: 'Righteous', cursive;
+    letter-spacing: .5px;
+    text-align: center;
+    margin: 20px;
+}
