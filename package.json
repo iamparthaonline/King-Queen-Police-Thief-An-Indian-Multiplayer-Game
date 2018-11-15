@@ -54,7 +54,8 @@
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-hot-loader": "4.3.11",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "socket.io-client": "^2.1.1"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"

@@ -15,7 +15,7 @@ const Main = () => (
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/create-game" component={createGame} />
-      <Route path="/game/:gameId/instance/:instanceId" component={Game} />
+      <Route path="/game/:gameId/instance/:instanceId/username/:username" component={Game} />
     </Switch>
   </main>
 );

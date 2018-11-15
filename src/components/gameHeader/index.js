@@ -11,8 +11,9 @@ const gameHeader = ({ message, type }) => (
   </div>
 );
 
-gameHeader.PropTypes = {
-  title: PropTypes.string,
+gameHeader.propTypes = {
+  message: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default gameHeader;
